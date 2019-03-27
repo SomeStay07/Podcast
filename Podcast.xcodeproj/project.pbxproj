@@ -12,6 +12,7 @@
 		987E5C15224C0C9700827328 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987E5C13224C0C9700827328 /* Main.storyboard */; };
 		987E5C17224C0C9B00827328 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 987E5C16224C0C9B00827328 /* Assets.xcassets */; };
 		987E5C1A224C0C9B00827328 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987E5C18224C0C9B00827328 /* LaunchScreen.storyboard */; };
+		987E5C22224C0D3200827328 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987E5C21224C0D3200827328 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		987E5C16224C0C9B00827328 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		987E5C19224C0C9B00827328 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		987E5C1B224C0C9B00827328 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		987E5C21224C0D3200827328 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,9 @@
 		987E5C0E224C0C9700827328 /* Podcast */ = {
 			isa = PBXGroup;
 			children = (
+				987E5C23224C0D3600827328 /* Model */,
+				987E5C24224C0D3E00827328 /* View */,
+				987E5C25224C0D4300827328 /* Controller */,
 				987E5C0F224C0C9700827328 /* AppDelegate.swift */,
 				987E5C11224C0C9700827328 /* ViewController.swift */,
 				987E5C13224C0C9700827328 /* Main.storyboard */,
@@ -62,6 +67,28 @@
 				987E5C1B224C0C9B00827328 /* Info.plist */,
 			);
 			path = Podcast;
+			sourceTree = "<group>";
+		};
+		987E5C23224C0D3600827328 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		987E5C24224C0D3E00827328 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		987E5C25224C0D4300827328 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				987E5C21224C0D3200827328 /* MainTabBarController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +164,7 @@
 			files = (
 				987E5C12224C0C9700827328 /* ViewController.swift in Sources */,
 				987E5C10224C0C9700827328 /* AppDelegate.swift in Sources */,
+				987E5C22224C0D3200827328 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +317,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hithere.Podcast;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hithere.StanfordCourse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,7 +335,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hithere.Podcast;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hithere.StanfordCourse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
