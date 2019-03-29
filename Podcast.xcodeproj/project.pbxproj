@@ -10,6 +10,8 @@
 		4FA73970B5924221BA8F7F22 /* Pods_Podcast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A48170BC1BF3959A838E4 /* Pods_Podcast.framework */; };
 		985EDC26224E66DE005A568D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985EDC25224E66DE005A568D /* APIService.swift */; };
 		985EDC28224E6EA3005A568D /* PodcastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 985EDC27224E6EA3005A568D /* PodcastCell.xib */; };
+		985EDC2A224E7330005A568D /* PodcastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985EDC29224E7330005A568D /* PodcastCell.swift */; };
+		985EDC2C224EAAB5005A568D /* EpisodesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985EDC2B224EAAB5005A568D /* EpisodesController.swift */; };
 		987E5C10224C0C9700827328 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987E5C0F224C0C9700827328 /* AppDelegate.swift */; };
 		987E5C12224C0C9700827328 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987E5C11224C0C9700827328 /* ViewController.swift */; };
 		987E5C15224C0C9700827328 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987E5C13224C0C9700827328 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		985EDC25224E66DE005A568D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		985EDC27224E6EA3005A568D /* PodcastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PodcastCell.xib; sourceTree = "<group>"; };
+		985EDC29224E7330005A568D /* PodcastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCell.swift; sourceTree = "<group>"; };
+		985EDC2B224EAAB5005A568D /* EpisodesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesController.swift; sourceTree = "<group>"; };
 		987E5C0C224C0C9700827328 /* Podcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		987E5C0F224C0C9700827328 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		987E5C11224C0C9700827328 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				985EDC27224E6EA3005A568D /* PodcastCell.xib */,
+				985EDC29224E7330005A568D /* PodcastCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			children = (
 				987E5C21224C0D3200827328 /* MainTabBarController.swift */,
 				987E5C26224E0E6B00827328 /* PodcastsSearchController.swift */,
+				985EDC2B224EAAB5005A568D /* EpisodesController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -215,12 +221,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Podcast/Pods-Podcast-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -259,9 +267,11 @@
 				987E5C27224E0E6B00827328 /* PodcastsSearchController.swift in Sources */,
 				987E5C12224C0C9700827328 /* ViewController.swift in Sources */,
 				987E5C10224C0C9700827328 /* AppDelegate.swift in Sources */,
+				985EDC2C224EAAB5005A568D /* EpisodesController.swift in Sources */,
 				987E5C22224C0D3200827328 /* MainTabBarController.swift in Sources */,
 				985EDC26224E66DE005A568D /* APIService.swift in Sources */,
 				987E5C29224E0F5F00827328 /* Podcast.swift in Sources */,
+				985EDC2A224E7330005A568D /* PodcastCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@ import Alamofire
 
 class PodcastsSearchController: UITableViewController, UISearchBarDelegate {
     
-    var podcasts = [ Podcast(trackName: "12345", artistName: "Denis") ]
+    var podcasts = [Podcast]()
     
     let cellId = "cellId"
     
@@ -34,7 +34,21 @@ class PodcastsSearchController: UITableViewController, UISearchBarDelegate {
     
     //MARK:- UITableView
     fileprivate func setupTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        tableView.tableFooterView = UIView()
+        let nib = UINib(nibName: "PodcastCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: cellId)
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.text = "Please enter a Search Term"
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        return label
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return self.podcasts.count > 0 ? 0 : 250
     }
     
     fileprivate func setupSearchBar() {
@@ -49,14 +63,15 @@ class PodcastsSearchController: UITableViewController, UISearchBarDelegate {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! PodcastCell
         
         let podcast = self.podcasts[indexPath.row]
-        cell.textLabel?.text = "\(podcast.trackName ?? "")\n\(podcast.artistName ?? "")"
-        cell.textLabel?.numberOfLines = -1
-        cell.imageView?.image = #imageLiteral(resourceName: "appicon")
-        
+        cell.podcast = podcast
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 132
     }
     
 }
