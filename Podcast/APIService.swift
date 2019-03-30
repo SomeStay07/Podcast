@@ -28,8 +28,6 @@ class APIService {
                 let searchResult = try
                     JSONDecoder().decode(SearchResult.self, from: data)
                 completionHandler(searchResult.results)
-//                self.podcasts = searchResult.results
-//                self.tableView.reloadData()
             } catch let decodeError {
                 print("Faild", decodeError)
             }
