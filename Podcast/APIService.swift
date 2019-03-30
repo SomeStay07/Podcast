@@ -18,15 +18,18 @@ class APIService {
         let secureFeedUrl = feedUrl.contains("https") ? feedUrl : feedUrl.replacingOccurrences(of: "http", with: "https")
         
         guard let url = URL(string: secureFeedUrl) else { return }
-        let parser = FeedParser(URL: url)
-        parser.parseAsync { (result) in
-            if let error = result.error {
-                print("failed to parse XML feed:", error)
+        
+        DispatchQueue.global(qos: .background).async {
+            let parser = FeedParser(URL: url)
+            parser.parseAsync { (result) in
+                if let error = result.error {
+                    print("failed to parse XML feed:", error)
+                }
+                guard let feed = result.rssFeed else { return }
+                
+                let episodes = feed.toEpisodes()
+                completionHandler(episodes)
             }
-            guard let feed = result.rssFeed else { return }
-            
-            let episodes = feed.toEpisodes()
-            completionHandler(episodes)
         }
     }
     

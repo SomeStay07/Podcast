@@ -23,14 +23,21 @@ class PodcastsSearchController: UITableViewController, UISearchBarDelegate {
         
         setupSearchBar()
         setupTableView()
+        searchBar(searchController.searchBar, textDidChange: "Voong")
     }
     
+    var timer: Timer?
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        //setup API
-        APIService.shared.fetchPodcasts(searchText: searchText) { (podcasts) in
-            self.podcasts = podcasts
-            self.tableView.reloadData()
-        }
+        
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (timer) in
+            //setup API
+            APIService.shared.fetchPodcasts(searchText: searchText) { (podcasts) in
+                self.podcasts = podcasts
+                self.tableView.reloadData()
+            }
+        })
     }
     
     //MARK:- UITableView
