@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4FA73970B5924221BA8F7F22 /* Pods_Podcast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A48170BC1BF3959A838E4 /* Pods_Podcast.framework */; };
+		981AA9272252AC5B00872FB0 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981AA9262252AC5B00872FB0 /* UIApplication.swift */; };
 		985EDC26224E66DE005A568D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985EDC25224E66DE005A568D /* APIService.swift */; };
 		985EDC28224E6EA3005A568D /* PodcastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 985EDC27224E6EA3005A568D /* PodcastCell.xib */; };
 		985EDC2A224E7330005A568D /* PodcastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985EDC29224E7330005A568D /* PodcastCell.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		981AA9262252AC5B00872FB0 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		985EDC25224E66DE005A568D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		985EDC27224E6EA3005A568D /* PodcastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PodcastCell.xib; sourceTree = "<group>"; };
 		985EDC29224E7330005A568D /* PodcastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCell.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				98D5C69B224F62FA00D40331 /* String.swift */,
 				98D5C69D224F640300D40331 /* RSSFeed.swift */,
 				98D5C6A3224FB73100D40331 /* CMTime.swift */,
+				981AA9262252AC5B00872FB0 /* UIApplication.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				98D5C69E224F640300D40331 /* RSSFeed.swift in Sources */,
 				98D5C6A2224F8DDD00D40331 /* PlayerDetailsView.swift in Sources */,
 				987E5C27224E0E6B00827328 /* PodcastsSearchController.swift in Sources */,
+				981AA9272252AC5B00872FB0 /* UIApplication.swift in Sources */,
 				98D5C69C224F62FA00D40331 /* String.swift in Sources */,
 				98D5C6A4224FB73100D40331 /* CMTime.swift in Sources */,
 				987E5C12224C0C9700827328 /* ViewController.swift in Sources */,
