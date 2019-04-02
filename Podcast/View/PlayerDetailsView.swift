@@ -21,7 +21,7 @@ class PlayerDetailsView: UIView {
             playEpisode()
             guard let url = URL(string: episode.imageUrl ?? "") else { return }
             episodeImageView.sd_setImage(with: url)
-//            miniEpisodeImageView.sd_setImage(with: url)
+            miniEpisodeImageView.sd_setImage(with: url)
             miniEpisodeImageView.sd_setImage(with: url) { (image, _, _, _) in
                 
                 guard let image = image else { return }
@@ -145,6 +145,54 @@ class PlayerDetailsView: UIView {
             self.handlePlayPause()
             return .success
         }
+        
+        commandCenter.nextTrackCommand.addTarget(self, action: #selector(handleNextTrack))
+        commandCenter.previousTrackCommand.addTarget(self, action: #selector(handlePreviousTrack))
+    }
+    
+    var playlistEpisodes = [Episode]()
+    
+    @objc fileprivate func handlePreviousTrack() {
+        if playlistEpisodes.count == 0 {
+            return
+        }
+        
+        let currentEpisodeIndex = playlistEpisodes.firstIndex { (ep) -> Bool in
+            return self.episode.title == ep.title && self.episode.author == ep.author
+        }
+        
+        guard let index = currentEpisodeIndex else { return }
+        
+        let prevEpisode: Episode
+        
+        if index == 0 {
+            let count =  playlistEpisodes.count
+            prevEpisode = playlistEpisodes[count - 1]
+        } else {
+            prevEpisode = playlistEpisodes[index - 1]
+        }
+        self.episode = prevEpisode
+        
+    }
+    
+    @objc fileprivate func handleNextTrack() {
+        if playlistEpisodes.count == 0 {
+            return
+        }
+        
+        let currentEpisodeIndex = playlistEpisodes.firstIndex { (ep) -> Bool in
+            return self.episode.title == ep.title && self.episode.author == ep.author
+        }
+        
+        guard let index = currentEpisodeIndex else { return }
+        
+        let nextEpisode: Episode
+        if index == playlistEpisodes.count - 1 {
+            nextEpisode = playlistEpisodes[0]
+        } else {
+            nextEpisode = playlistEpisodes[index + 1]
+        }
+        self.episode = nextEpisode
     }
     
     fileprivate func setupElapsedTime() {
@@ -253,7 +301,7 @@ class PlayerDetailsView: UIView {
         let seekTimeInSeconds = Float64(percentage) * durationInSeconds
         
         let seekTime = CMTimeMakeWithSeconds(seekTimeInSeconds, preferredTimescale: 1)
-     
+        
         MPNowPlayingInfoCenter.default().nowPlayingInfo?[MPNowPlayingInfoPropertyElapsedPlaybackTime] = seekTimeInSeconds
         
         player.seek(to: seekTime)
