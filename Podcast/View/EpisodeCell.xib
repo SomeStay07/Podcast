@@ -49,11 +49,20 @@
                             </label>
                         </subviews>
                     </stackView>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syN-MH-Nyx">
+                        <rect key="frame" x="28" y="134" width="76.5" height="33.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="1"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="syN-MH-Nyx" firstAttribute="centerX" secondItem="LOx-68-omW" secondAttribute="centerX" id="0K2-0P-h2h"/>
                     <constraint firstItem="LOx-68-omW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6ce-3A-oYI"/>
                     <constraint firstItem="0aC-Qe-M88" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8xc-xa-wNP"/>
                     <constraint firstItem="0aC-Qe-M88" firstAttribute="leading" secondItem="LOx-68-omW" secondAttribute="trailing" constant="16" id="ACd-mj-dQT"/>
+                    <constraint firstItem="syN-MH-Nyx" firstAttribute="top" secondItem="LOx-68-omW" secondAttribute="bottom" constant="-67" id="AfG-4L-048"/>
                     <constraint firstItem="LOx-68-omW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aco-cm-ljQ"/>
                     <constraint firstAttribute="trailingMargin" secondItem="0aC-Qe-M88" secondAttribute="trailing" constant="16" id="wl3-VG-EvG"/>
                 </constraints>
@@ -62,6 +71,7 @@
             <connections>
                 <outlet property="descriptionLabel" destination="es2-l9-PDt" id="O82-BO-5lM"/>
                 <outlet property="episodeImageView" destination="LOx-68-omW" id="OVF-2e-cO2"/>
+                <outlet property="progressLabel" destination="syN-MH-Nyx" id="w7q-HH-NNO"/>
                 <outlet property="pubDateLabel" destination="Q83-8o-EBv" id="JoJ-m3-UDd"/>
                 <outlet property="titleLabel" destination="3So-IP-eTk" id="iLJ-Wf-Mqn"/>
             </connections>
