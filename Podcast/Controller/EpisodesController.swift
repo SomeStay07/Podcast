@@ -92,13 +92,13 @@ class EpisodesController: UITableViewController {
     //MARK:- UITableView
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        
         let downloadAction = UITableViewRowAction(style: .normal, title: "Download") { (_, _) in
             let episode = self.episodes[indexPath.row]
             UserDefaults.standard.downloadEpisode(episode: episode)
             UIApplication.mainTabBarController()?.viewControllers?[2].tabBarItem.badgeValue = "New"
             
             // download the podcast via Alamofire
+            APIService.shared.downloadEpisode(episode: episode)
         }
         return [downloadAction]
     }
