@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4FA73970B5924221BA8F7F22 /* Pods_Podcast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A48170BC1BF3959A838E4 /* Pods_Podcast.framework */; };
 		981AA9272252AC5B00872FB0 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981AA9262252AC5B00872FB0 /* UIApplication.swift */; };
+		984E88B02253CCC10045D6BD /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E88AF2253CCC10045D6BD /* FavoritesController.swift */; };
+		984E88B22253D3E40045D6BD /* FavoritePodcastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E88B12253D3E40045D6BD /* FavoritePodcastCell.swift */; };
+		984E88B42254A4F10045D6BD /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E88B32254A4F10045D6BD /* UserDefaults.swift */; };
+		984E88B62254CBB10045D6BD /* DownloadsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E88B52254CBB10045D6BD /* DownloadsController.swift */; };
 		985EDC26224E66DE005A568D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985EDC25224E66DE005A568D /* APIService.swift */; };
 		985EDC28224E6EA3005A568D /* PodcastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 985EDC27224E6EA3005A568D /* PodcastCell.xib */; };
 		985EDC2A224E7330005A568D /* PodcastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985EDC29224E7330005A568D /* PodcastCell.swift */; };
@@ -33,6 +37,10 @@
 
 /* Begin PBXFileReference section */
 		981AA9262252AC5B00872FB0 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		984E88AF2253CCC10045D6BD /* FavoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
+		984E88B12253D3E40045D6BD /* FavoritePodcastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePodcastCell.swift; sourceTree = "<group>"; };
+		984E88B32254A4F10045D6BD /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		984E88B52254CBB10045D6BD /* DownloadsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsController.swift; sourceTree = "<group>"; };
 		985EDC25224E66DE005A568D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		985EDC27224E6EA3005A568D /* PodcastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PodcastCell.xib; sourceTree = "<group>"; };
 		985EDC29224E7330005A568D /* PodcastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCell.swift; sourceTree = "<group>"; };
@@ -143,6 +151,7 @@
 				98D5C697224F571A00D40331 /* EpisodeCell.xib */,
 				98D5C69F224F8A9800D40331 /* PlayerDetailsView.xib */,
 				98D5C6A1224F8DDD00D40331 /* PlayerDetailsView.swift */,
+				984E88B12253D3E40045D6BD /* FavoritePodcastCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,6 +162,8 @@
 				987E5C21224C0D3200827328 /* MainTabBarController.swift */,
 				987E5C26224E0E6B00827328 /* PodcastsSearchController.swift */,
 				985EDC2B224EAAB5005A568D /* EpisodesController.swift */,
+				984E88AF2253CCC10045D6BD /* FavoritesController.swift */,
+				984E88B52254CBB10045D6BD /* DownloadsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,6 +175,7 @@
 				98D5C69D224F640300D40331 /* RSSFeed.swift */,
 				98D5C6A3224FB73100D40331 /* CMTime.swift */,
 				981AA9262252AC5B00872FB0 /* UIApplication.swift */,
+				984E88B32254A4F10045D6BD /* UserDefaults.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -315,13 +327,17 @@
 				98D5C69C224F62FA00D40331 /* String.swift in Sources */,
 				98D5C6A4224FB73100D40331 /* CMTime.swift in Sources */,
 				987E5C12224C0C9700827328 /* ViewController.swift in Sources */,
+				984E88B62254CBB10045D6BD /* DownloadsController.swift in Sources */,
 				987E5C10224C0C9700827328 /* AppDelegate.swift in Sources */,
 				985EDC2C224EAAB5005A568D /* EpisodesController.swift in Sources */,
 				987E5C22224C0D3200827328 /* MainTabBarController.swift in Sources */,
 				98D5C698224F571A00D40331 /* EpisodeCell.swift in Sources */,
+				984E88B02253CCC10045D6BD /* FavoritesController.swift in Sources */,
 				985EDC26224E66DE005A568D /* APIService.swift in Sources */,
 				987E5C29224E0F5F00827328 /* Podcast.swift in Sources */,
+				984E88B42254A4F10045D6BD /* UserDefaults.swift in Sources */,
 				98D5C691224F55E100D40331 /* Episode.swift in Sources */,
+				984E88B22253D3E40045D6BD /* FavoritePodcastCell.swift in Sources */,
 				985EDC2A224E7330005A568D /* PodcastCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
